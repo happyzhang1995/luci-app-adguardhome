@@ -1,0 +1,4 @@
+
+config AdGuardHome 'AdGuardHome'
+	option enabled '1'
+
