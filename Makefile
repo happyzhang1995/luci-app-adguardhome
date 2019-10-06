@@ -35,7 +35,7 @@ define Package/luci-app-adguardhome/install
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci
 	cp -pR ./luasrc/* $(1)/usr/lib/lua/luci
 	$(INSTALL_DIR) $(1)/
-	cp -pR ./root/* $(1)/S
+	cp -pR ./root/* $(1)/
 endef
 
 define Package/luci-app-adguardhome/postinst
