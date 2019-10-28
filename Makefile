@@ -18,7 +18,7 @@ define Package/luci-app-adguardhome
 	CATEGORY:=LuCI
 	SUBMENU:=3. Applications
 	TITLE:=LuCI Support for adguardhome on or off
-	DEPENDS:=+iputils-arping +curl
+	DEPENDS:=+AdGuardHome
 endef
 
 define Package/luci-app-adguardhome/description
