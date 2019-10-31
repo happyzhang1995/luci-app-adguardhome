@@ -2,11 +2,10 @@ require("luci.sys")
 require("luci.util")
 local fs=require"nixio.fs"
 local port=require"luci.model.uci".cursor()
-
 local port=port:get("AdGuardHome","AdGuardHome","port")
+
 mp = Map("AdGuardHome", translate("AdGuard Home"))
 mp.description = translate("免费和开源，功能强大的全网络广告和跟踪程序拦截DNS服务器")
-
 mp:section(SimpleSection).template  = "AdGuardHome/AdGuardHome_status"
 
 s = mp:section(TypedSection, "AdGuardHome")
