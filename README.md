@@ -7,4 +7,4 @@
   - 修正页面显示.
 
 ---
-编译完不启动的把/root/etc/init.d/adguardhome启动文件权限改为775，或者直接把编译源文件的/root/etc/init.d/adguardhome启动文件权限改为775，这样每次编译完就不用改了
+编译完不启动的把/root/etc/init.d/adguardhome启动文件权限改为755，或者直接把编译源文件的/root/etc/init.d/adguardhome启动文件权限改为755，这样每次编译完就不用改了
