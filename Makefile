@@ -40,7 +40,7 @@ endef
 
 define Package/luci-app-adguardhome/postinst
 #!/bin/sh
-	chmod +x /etc/init.d/AdGuardHome >/dev/null 2>&1
+	chmod 755 /etc/init.d/AdGuardHome >/dev/null 2>&1
 	/etc/init.d/AdGuardHome enable >/dev/null 2>&1
 exit 0
 endef
