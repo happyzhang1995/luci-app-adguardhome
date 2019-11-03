@@ -34,13 +34,14 @@ endef
 define Package/luci-app-adguardhome/install
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci
 	cp -pR ./luasrc/* $(1)/usr/lib/lua/luci
-	$(INSTALL_DIR) $(1)/
-	cp -pR ./root/* $(1)/
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_BIN) ./root/etc/init.d/AdGuardHome $(1)/etc/init.d/
+	$(INSTALL_DIR) $(1)/etc/config
+	cp -pR ./root/etc/config/* $(1)/etc/config/
 endef
 
 define Package/luci-app-adguardhome/postinst
 #!/bin/sh
-	chmod 0755 /etc/init.d/AdGuardHome >/dev/null 2>&1
 	/etc/init.d/AdGuardHome enable >/dev/null 2>&1
 exit 0
 endef
